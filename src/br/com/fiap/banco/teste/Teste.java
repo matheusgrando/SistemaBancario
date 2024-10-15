@@ -1,4 +1,6 @@
-package br.com.fiap.banco;
+package br.com.fiap.banco.teste;
+
+import br.com.fiap.banco.beans.Conta;
 
 public class Teste {
 
