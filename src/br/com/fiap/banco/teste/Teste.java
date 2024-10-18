@@ -1,6 +1,7 @@
 package br.com.fiap.banco.teste;
 
 import br.com.fiap.banco.beans.Conta;
+import br.com.fiap.banco.beans.ContaCorrente;
 
 public class Teste {
 
@@ -28,6 +29,39 @@ public class Teste {
         poupanca.retirar(50);
 
         System.out.println(poupanca.getSaldo());
+
+
+
+
+        System.out.println("-----------------");
+
+        // Testando o Polimorfismo
+
+        // Exemplo 1
+        // Gerando um objeto da superclasse Conta, que será controlado
+        // por uma variável de controle a partir da superclasse Conta.
+        Conta conta1 = new Conta();
+        conta1.depositar(1000);
+        conta1.retirar(100);
+
+        // Exemplo 2
+        // Gerando um objeto da subclasse ContaCorrente, que será controlado
+        // por uma variável de controle a partir da subclasse ContaCorrente.
+        ContaCorrente conta2 = new ContaCorrente();
+        conta2.depositar(1000);
+        conta2.retirar(100);
+
+        // Exemplo 3
+        // Gerando um objeto da subclasse ContaCorrente, que será controlado
+        // por uma variável de controle a partir da superclasse Conta.
+        Conta conta3 = new ContaCorrente();
+        conta3.depositar(1000);
+        conta3.retirar(100);
+
+        System.out.println("Conta1: " + conta1.getSaldo());
+        System.out.println("Conta2: " + conta2.getSaldo());
+        System.out.println("Conta3: " + conta3.getSaldo());
+
 
     }
 

@@ -25,4 +25,16 @@ public class ContaCorrente extends Conta {
         return super.getSaldo() + chequeEspecial;
     }
 
+    // Sobrescrita de Método
+    /*
+    Desse modo, ao utilizarmos o método "retirar" a partir de um objeto de ContaCorrente(),
+    o método "retirar" chamado passa a não ser mais o da superclasse Conta.
+     */
+
+    @Override
+    public void retirar(double valor) {
+        valor += 10;
+        super.retirar(valor);
+    }
+
 }
